@@ -121,7 +121,7 @@ This project is licensed under the **MIT License**.
 
 ## 🌎 Live Demo
 
-🔗 [Live Blog](https://your-vercel-app-url.vercel.app)
+🔗 [Live Blog](https://strapi-frontend-puce.vercel.app/)
 
 ---
 
