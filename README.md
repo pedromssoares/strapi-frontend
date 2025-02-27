@@ -32,6 +32,13 @@ Welcome to **Headless CMS Blog**, a modern and fully customizable blog built wit
 
 ---
 
+## Image
+
+<img width="1462" alt="image" src="https://github.com/user-attachments/assets/77ae4518-6af9-4987-8e0c-bc1744a39f02" />
+
+---
+
+
 ## 📂 Folder Structure
 
 ```
