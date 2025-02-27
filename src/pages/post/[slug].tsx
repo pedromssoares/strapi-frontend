@@ -7,15 +7,16 @@ import { ptBR } from "date-fns/locale";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { vscDarkPlus } from "react-syntax-highlighter/dist/cjs/styles/prism"; // 🔹 Melhor para fundo claro
+import { dracula } from "react-syntax-highlighter/dist/cjs/styles/prism"; // 🔹 Melhor para fundo claro
 
 interface PostPageProps {
   post: Post;
 }
 
 const BASE_URL = process.env.NEXT_PUBLIC_API_BACKEND_URL;
-  
-export default function PostPage({ post }: PostPageProps) {const BASE_URL = process.env.NEXT_PUBLIC_API_BACKEND_URL;
+
+export default function PostPage({ post }: PostPageProps) {
+  const BASE_URL = process.env.NEXT_PUBLIC_API_BACKEND_URL;
   const imageUrl = post.image?.formats?.large?.url || post.image?.url;
 
   return (
@@ -87,14 +88,18 @@ export default function PostPage({ post }: PostPageProps) {const BASE_URL = proc
                 </p>
               );
             },
-            code({ inline, children, ...props }) {
-              return inline ? (
+            code({ className, children, ...props }) {
+              const isInline = className?.includes("inline");
+
+              return isInline ? (
                 <code className="bg-brown-200 dark:bg-brown-700 px-1 py-0.5 rounded text-sm font-mono">
                   {children}
                 </code>
               ) : (
+                
                 <SyntaxHighlighter
-                  style={vscDarkPlus}
+                // @ts-expect-error para se livrar desse style
+                  style={dracula}
                   language="javascript"
                   PreTag="div"
                   className="rounded-lg text-sm overflow-x-auto bg-brown-100 dark:bg-brown-800"

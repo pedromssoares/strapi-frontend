@@ -1,36 +1,132 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📌 Headless CMS Blog
 
-## Getting Started
+Welcome to **Headless CMS Blog**, a modern and fully customizable blog built with **Next.js** and **Strapi**! This project follows a **headless architecture**, leveraging Strapi as the CMS and Next.js for the frontend, ensuring a fast and flexible solution for content management.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🚀 Features
+
+- **Headless CMS:** Powered by Strapi for seamless content management.
+- **SSG & SSR:** Utilizes Next.js **getStaticProps** and **getServerSideProps** for optimized performance.
+- **Markdown Support:** Blogs are written in Markdown format for easy formatting.
+- **Dark Mode:** Fully integrated with Tailwind CSS dark mode.
+- **SEO Optimized:** Dynamically generates **meta tags**, **OpenGraph**, and **structured data**.
+- **Responsive Design:** Mobile-first approach with Tailwind CSS.
+- **Fast Image Optimization:** Uses Next.js Image component for automatic resizing and lazy loading.
+- **Multi-language Support:** Powered by i18n.
+- **Category Filtering:** Easily filter blog posts by categories.
+- **Dynamic Routing:** Automatically generates dynamic pages for posts and categories.
+- **Deployed on Vercel:** Live and optimized deployment.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend:** Next.js, React, Tailwind CSS
+- **Backend:** Strapi (Headless CMS)
+- **Database:** PostgreSQL (on Render.com)
+- **Deployment:** Vercel (Frontend) & Render (Backend)
+- **State Management:** React Hooks & Context API
+- **Markdown Rendering:** React Markdown & rehype plugins
+- **Animations:** Framer Motion
+
+---
+
+## 📂 Folder Structure
+
+```
+frontend/
+│── src/
+│   ├── components/       # Reusable components (Header, Footer, PostCard, etc.)
+│   ├── pages/            # Next.js page routes
+│   │   ├── index.tsx     # Home page (Lists all posts)
+│   │   ├── post/[slug].tsx # Dynamic blog post page
+│   │   ├── category/[slug].tsx # Dynamic category filtering
+│   ├── styles/           # Tailwind CSS styles
+│   ├── services/         # API requests to Strapi
+│   ├── types/            # TypeScript interfaces
+│── public/               # Static assets
+│── next.config.js        # Next.js configuration
+│── tailwind.config.js    # Tailwind CSS configuration
+│── package.json          # Dependencies
+│── README.md             # Documentation
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🔧 Installation
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### **1️⃣ Clone the repository**
+```sh
+git clone https://github.com/your-username/headless-cms-blog.git
+cd headless-cms-blog
+```
 
-## Learn More
+### **2️⃣ Install dependencies**
+```sh
+yarn install
+# or
+npm install
+```
 
-To learn more about Next.js, take a look at the following resources:
+### **3️⃣ Configure environment variables**
+Create a `.env.local` file in the root and add the following:
+```env
+NEXT_PUBLIC_API_URL=https://your-strapi-api-url.com
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### **4️⃣ Run the project locally**
+```sh
+yarn dev
+# or
+npm run dev
+```
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🚀 Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### **Vercel (Recommended)**
+1. Create a Vercel account and install the Vercel CLI.
+2. Run the following command:
+```sh
+vercel
+```
+3. Follow the instructions to deploy the project.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 🎨 Customization
+
+You can customize the project by modifying the following:
+- **Colors & Styles**: Tailwind configuration in `tailwind.config.js`
+- **Fonts**: Modify `globals.css` with your preferred fonts.
+- **SEO Settings**: Update the `<Head>` metadata in each page.
+- **i18n Translations**: Add more languages in `i18n.js`.
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Feel free to fork the project, open an issue, or submit a pull request.
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License**.
+
+---
+
+## 🌎 Live Demo
+
+🔗 [Live Blog](https://your-vercel-app-url.vercel.app)
+
+---
+
+## 📞 Contact
+
+For any inquiries, feel free to reach out:
+📧 Email: pedro.santos-soares@outlook.com
+
