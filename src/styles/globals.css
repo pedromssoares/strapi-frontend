@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind typography;
+
+.prose {
+  max-width: 100%;
+}
+
+.prose img {
+  border-radius: 8px;
+  margin: 16px auto;
+}
+
+.prose pre {
+  border-radius: 8px;
+  padding: 1rem;
+  overflow-x: auto;
+}
+
+.prose blockquote {
+  font-style: italic;
+  padding-left: 1rem;
+  border-left: 4px solid #ffba08;
+}
+
+.prose code {
+  font-family: "Fira Code", monospace;
+}
