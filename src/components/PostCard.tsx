@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { ContentBlock } from "@/types/types";
 import ReactMarkdown from "react-markdown";
 
 const BASE_URL = process.env.NEXT_PUBLIC_API_BACKEND_URL;
@@ -8,7 +7,7 @@ interface PostProps {
   id: number;
   title: string;
   slug: string;
-  content: ContentBlock[];
+  content: string;
   category?: string;
   image?: string;
 }
